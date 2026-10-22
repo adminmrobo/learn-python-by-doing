@@ -1,0 +1,123 @@
+site_name: 쉽게 따라 해 보면서 배우는 파이썬
+site_description: 카페·편의점·쇼핑몰 데이터로 한 절씩 따라 하는 파이썬 데이터 연습장
+site_author: 안상선 (Ahn, Sang-Sun)
+copyright: © 2026 안상선 (Ahn, Sang-Sun). All rights reserved. 예제 속 가게와 숫자는 모두 지어낸 것입니다. Money-Robo는 저자 서비스의 마스코트이며, 극 중 대사는 비유일 뿐 투자 권유가 아닙니다.
+
+# ↓ 이 두 줄만 내 계정과 repo 이름으로 바꾼다. "Colab에서 열기" 버튼이 이 주소를 쓴다.
+site_url: https://USER.github.io/learn-python-by-doing/
+repo_url: https://github.com/USER/learn-python-by-doing
+repo_name: learn-python-by-doing
+edit_uri: ""
+not_in_nav: |
+  assets/chars/README.md
+
+theme:
+  name: material
+  language: ko
+  font:
+    text: Gothic A1
+    code: Nanum Gothic Coding
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle: {icon: material/weather-night, name: 어둡게}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle: {icon: material/weather-sunny, name: 밝게}
+  icon:
+    logo: material/notebook-edit-outline
+    repo: fontawesome/brands/github
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - navigation.indexes
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      lang: [ko, en]
+      separator: '[\s\-\.]+'
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc: {permalink: true}
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight: {anchor_linenums: false}
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.tasklist: {custom_checkbox: true}
+
+extra_css: [stylesheets/extra.css]
+extra_javascript: [javascripts/extra.js]
+
+nav:
+  - 처음: index.md
+  - 0편 시작하기:
+      - ep0/index.md
+      - 0-1 상담소 식구를 소개합니다: ep0/01-crew.md
+      - 0-2 Colab 열기: ep0/02-colab.md
+      - 0-3 실습 파일 올리기: ep0/03-upload.md
+      - 0-4 이것만 알면 코드를 읽는다: ep0/04-read-code.md
+      - 0-5 실행 규칙 세 가지: ep0/05-rules.md
+      - 0-6 한글이 깨질 때: ep0/06-hangul.md
+  - 1편 카페 Koi의 장부를 연다:
+      - ep1/index.md
+      - '1-1 판매 기록 읽고 모양 보기': ep1/01-read-sales.md
+      - '1-2 자료형과 빈칸부터': ep1/02-dtypes-missing.md
+      - '1-3 지저분한 원가표 엑셀 날것으로 보기': ep1/03-raw-excel.md
+      - '1-4 청소 ① 제목 줄, 빈 행, 열 이름 공백': ep1/04-clean-rows.md
+      - '1-5 청소 ② "₩4,500", 날짜, "-"': ep1/05-clean-values.md
+      - '1-6 배달앱 주문 JSON 읽기': ep1/06-json.md
+      - '1-7 열 고르고 조건 거르기': ep1/07-select-filter.md
+      - '1-8 새 열: 음료/디저트 분류와 순매출': ep1/08-new-columns.md
+      - '1-9 map 으로 원가 붙이기, 그런데 두 메뉴가 빈다': ep1/09-map-trap.md
+      - '1-10 공백 지우고 merge, 합계까지 맞추기': ep1/10-strip-merge.md
+      - '1-11 월별 손익표와 CH-01 월별 손익 막대': ep1/11-monthly-pl.md
+      - '1-12 검증 세 가지, 잡아낸 것 바로잡기': ep1/12-checks.md
+      - '1-13 CH-02 재고 폭포': ep1/13-stock-waterfall.md
+  - 2편 편의점은 언제 바쁜가:
+      - ep2/index.md
+      - '2-1 질문을 먼저 적고 답을 한 줄로': ep2/01-question-first.md
+      - '2-2 한글 라벨이 깨지면 영어로 다시': ep2/02-korean-labels.md
+      - '2-3 평균이냐 합계냐 · CH-03': ep2/03-mean-or-sum.md
+      - '2-4 유통기한까지 며칠 남았나 · CH-04': ep2/04-expiry-buckets.md
+      - '2-5 cumsum 으로 시재 다시 계산 · CH-05': ep2/05-cash-cumsum.md
+      - '2-6 평균과 중앙값 · CH-06': ep2/06-mean-median.md
+      - '2-7 시간대 × 요일 피벗 · CH-07': ep2/07-pivot-heatmap.md
+      - '2-8 영수증 금액의 첫 자리 · CH-08': ep2/08-first-digit.md
+      - '2-9 주말과 딱 떨어지는 금액 · CH-09': ep2/09-weekend-round.md
+  - 3편 해외 손님에게 가격을 알려 주자:
+      - ep3/index.md
+      - '3-1 글자 가격을 숫자로': ep3/01-text-price.md
+      - '3-2 yfinance 로 환율 받기': ep3/02-yfinance.md
+      - '3-3 통화 세 개를 한 번에': ep3/03-three-currencies.md
+      - '3-4 곱할까 나눌까, 그리고 100엔': ep3/04-multiply-or-divide.md
+      - '3-5 주말엔 환율이 없다 · CH-10': ep3/05-weekend-ffill.md
+      - '3-6 단순 평균 환율 vs 주문 가중 평균 환율 · CH-11': ep3/06-weighted-rate.md
+      - '3-7 환율과 해외 주문 수 · CH-12': ep3/07-rate-vs-orders.md
+      - '3-8 $0.50 단위로 반올림한 표시가 · CH-13': ep3/08-rounded-tag.md
+      - '3-9 AI 가격표 JSON 검증하고 저장': ep3/09-check-ai-tag.md
+  - 4편 가격을 바꾸면 이익이 움직인다:
+      - ep4/index.md
+      - '4-1 데이터 큐브: 월 × 요일 × 고객 유형': ep4/01-data-cube.md
+      - '4-2 한 면 잘라 보기 · CH-14': ep4/02-slice.md
+      - '4-3 3D 산점, 정말 읽히나 · CH-15': ep4/03-3d-scatter.md
+      - '4-4 가정은 사전에, 계산은 격자로': ep4/04-assumptions-grid.md
+      - '4-5 판매가 × 원두 단가 이익 등고선 · CH-16': ep4/05-contour.md
+      - '4-6 가정 바꾸기: 환율이 오르면': ep4/06-change-fx.md
+      - '4-7 3D 곡면 vs 2D 등고선': ep4/07-surface-vs-contour.md
+      - '4-8 보고서용으로 저장하고 내려받기': ep4/08-save-download.md
+  - 마감 내 가게 한 장: final/index.md
