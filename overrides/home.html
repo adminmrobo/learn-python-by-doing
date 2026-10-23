@@ -1,0 +1,99 @@
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<div class="lp-cover">
+<div class="alarm" role="status"><div class="wrap"><span class="lamp" aria-hidden="true"></span><div class="tick"><span>!!! 장부 도착 !!! 저녁 7시 · 발신: 카페 Koi · 동네 편의점 · 의류 쇼핑몰 · 내용: "이 장부 좀 봐 주세요" · 의뢰 5건 + 마감 1건 · 장부 상담소 전원 출근 !!!</span></div><a href="#missions">의뢰 보기</a></div></div>
+<header class="hero"><div class="wrap">
+  <div class="series"><span class="tag">도착</span><span>쉽게 따라 해 보면서 배우는 파이썬</span><span>· 0편 ~ 4편 · 마감</span></div>
+  <figure class="cscene pbox">
+    <img src="{{ 'assets/hero/hero.jpg' | url }}" width="1200" height="800" alt="저녁 일곱 시 장부 상담소. 창밖으로 카페, 편의점, 옷가게가 불을 켜고 있고, 책상에는 장부 더미와 노트북이 있다. 박사는 웃으며 서 있고, 조수는 책상 앞에, 초파리 연구원은 장부를 가리키고, 계산대 로봇은 떠 있다">
+    <span class="stamp">LEDGER RECEIVED</span><span class="clock">PM 07:00</span>
+  </figure>
+  <h1>저녁 일곱 시, 장부가 도착했다<br><span class="q">"이 숫자, 정말 맞아요?"</span></h1>
+  <p class="lede">동네 상가 2층 장부 상담소. 카페 Koi, 동네 편의점, 의류 쇼핑몰 사장님들이 장부를 들고 찾아옵니다. 파이썬을 몰라도 괜찮습니다. <b>한 절에 한 가지씩</b>, Colab 에 코드를 붙여 넣고, 결과를 이 사이트와 맞춰 보고, 다음 절로 넘어가면 됩니다.</p>
+  <p class="byline">글 · 안상선 ((주)M-Robo 대표)</p>
+</div></header>
+<section aria-labelledby="log-h"><div class="wrap">
+  <h2 id="log-h"><span class="no">LOG</span> 19:00 장부 상담소</h2>
+  <p class="sub">첫 장부 상자가 책상에 올라온 직후의 기록입니다.</p>
+  <div class="log">
+    <div class="sys">[SYSTEM] 의뢰 3건 접수. 첨부: 영수증 CSV, 원가표 엑셀, 배달앱 JSON, 환율 백업, AI 가 만든 가격표. 요청: "이 숫자, 맞는지 봐 주세요."</div>
+    <div class="csay c-asst"><img src="{{ 'assets/chars/asst_smile.png' | url }}" alt="세라"><div class="bub"><span class="who">세라</span>코드는 처음인데, 정말 따라 할 수 있을까요? 일단 장부 상자는 제가 열어 볼게요!</div></div>
+    <div class="csay c-doc"><img src="{{ 'assets/chars/doc_smile.png' | url }}" alt="박사"><div class="bub"><span class="who">박사</span>한 절에 한 가지만 해요. 숫자는 늘 화면에 보이게 하고요. 그리고 그림보다 검증이 먼저다.</div></div>
+    <div class="csay c-fly"><img src="{{ 'assets/chars/fly_point.png' | url }}" alt="초파리 연구원"><div class="bub"><span class="who">초파리 연구원</span>원가표 이름 끝에 공백이 숨어 있는 거 봤어? 장부는 늘 한 번 더 의심해야 해.</div></div>
+    <div class="csay c-robo"><img src="{{ 'assets/chars/robo_idle.png' | url }}" alt="Money-Robo"><div class="bub"><span class="who">Money-Robo</span>삐빅, 대기 중. 검증 셀을 돌리면 내 불빛이 초록이 될 거야!</div></div>
+  </div>
+</div></section>
+<section aria-labelledby="order-h"><div class="wrap">
+  <h2 id="order-h"><span class="no">ORDER</span> 상담소 의뢰서</h2>
+  <div class="pbox order">
+    <h3>■ 장부 정리 · 상담소 전원</h3>
+    <dl>
+      <dt>질문</dt><dd>가게 장부의 숫자를 파이썬으로 어떻게 읽고, 맞추고, 한 장으로 보여 주는가?</dd>
+      <dt>방법</dt><dd>한 절 10~15분. 코드 붙여 넣기 → 실행 → 결과 맞춰 보기 → 읽는 법 → 바꿔 보기</dd>
+      <dt>준비물</dt><dd>구글 계정 하나. 편마다 실습 zip 하나. 설치할 것은 없다</dd>
+      <dt>권장 순서</dt><dd>0편 → 1편 → 2편 → 3편 → 4편 → 마감. 끝낸 절은 체크하면 이 기기에 기억된다</dd>
+    </dl>
+  </div>
+</div></section>
+<section id="missions" aria-labelledby="mis-h"><div class="wrap">
+  <h2 id="mis-h"><span class="no">MISSIONS</span> 의뢰 다섯 건과 마감</h2>
+  <p class="sub">"▶ 시작"을 누르면 그 편의 첫 페이지로 갑니다. 절마다 "끝냈어요"를 체크하면 여기 진행이 채워집니다.</p>
+  <div class="missions">
+<article class="mcard" style="--mc:#5ee39c" data-steps="0-1,0-2,0-3,0-4,0-5,0-6">
+  <div class="mtop"><span class="mno">EPISODE 0</span><span class="mtag">장부 상담소</span><span class="mstar">★☆☆☆</span></div>
+  <h3>시작하기</h3><p class="msub">Colab, 파일 올리기, 코드 읽는 법, 한글 깨짐 · 6절</p>
+  <p class="brief"><b>의뢰</b> 처음 출근한 날. 노트북을 켜고, 첫 셀을 돌리고, 메뉴판 파일 하나를 표로 읽어라.</p>
+  <div class="mfoot"><a class="pbtn" href="{{ 'ep0/' | url }}">▶ 시작</a><span class="cnt">0 / 6 끝냄</span></div>
+</article>
+<article class="mcard" style="--mc:#82b8ff" data-steps="1-1,1-2,1-3,1-4,1-5,1-6,1-7,1-8,1-9,1-10,1-11,1-12,1-13">
+  <div class="mtop"><span class="mno">EPISODE 1</span><span class="mtag">카페 Koi</span><span class="mstar">★★☆☆</span></div>
+  <h3>카페 Koi의 장부를 연다</h3><p class="msub">읽기, 청소, map · merge, 검증 세 가지 · 13절</p>
+  <p class="brief"><b>의뢰</b> 1년 치 영수증 14,237줄과 지저분한 원가표 엑셀. 붙이고, 맞추고, 월별 손익 그림을 그려라.</p>
+  <div class="mfoot"><a class="pbtn" href="{{ 'ep1/' | url }}">▶ 시작</a><span class="cnt">0 / 13 끝냄</span></div>
+</article>
+<article class="mcard" style="--mc:#f1b646" data-steps="2-1,2-2,2-3,2-4,2-5,2-6,2-7,2-8,2-9">
+  <div class="mtop"><span class="mno">EPISODE 2</span><span class="mtag">동네 편의점</span><span class="mstar">★★☆☆</span></div>
+  <h3>편의점은 언제 바쁜가</h3><p class="msub">질문 먼저, 차트 7종 · 9절</p>
+  <p class="brief"><b>의뢰</b> "언제 사람을 더 둬야 하지?" 결제 7,810건으로 답을 한 줄로 적어라.</p>
+  <div class="mfoot"><a class="pbtn" href="{{ 'ep2/' | url }}">▶ 시작</a><span class="cnt">0 / 9 끝냄</span></div>
+</article>
+<article class="mcard" style="--mc:#ff86b8" data-steps="3-1,3-2,3-3,3-4,3-5,3-6,3-7,3-8,3-9">
+  <div class="mtop"><span class="mno">EPISODE 3</span><span class="mtag">의류 쇼핑몰</span><span class="mstar">★★★☆</span></div>
+  <h3>해외 손님에게 가격을 알려 주자</h3><p class="msub">yfinance 환율, 바깥 데이터 · 9절</p>
+  <p class="brief"><b>의뢰</b> 달러 · 엔 · 위안 가격표를 만들고, AI 가 만든 가격표의 실수를 잡아라.</p>
+  <div class="mfoot"><a class="pbtn" href="{{ 'ep3/' | url }}">▶ 시작</a><span class="cnt">0 / 9 끝냄</span></div>
+</article>
+<article class="mcard" style="--mc:#f0604d" data-steps="4-1,4-2,4-3,4-4,4-5,4-6,4-7,4-8">
+  <div class="mtop"><span class="mno">EPISODE 4</span><span class="mtag">카페 Koi</span><span class="mstar">★★★★</span></div>
+  <h3>가격을 바꾸면 이익이 움직인다</h3><p class="msub">데이터 큐브, 민감도 등고선 · 8절</p>
+  <p class="brief"><b>의뢰</b> 원두값과 환율이 올랐다. 커피값은 얼마 이상 받아야 하는지 그림 한 장으로 답하라.</p>
+  <div class="mfoot"><a class="pbtn" href="{{ 'ep4/' | url }}">▶ 시작</a><span class="cnt">0 / 8 끝냄</span></div>
+</article>
+<article class="mcard" style="--mc:#b07cff" data-steps="9-1">
+  <div class="mtop"><span class="mno">FINAL</span><span class="mtag">셋 중 하나</span><span class="mstar">★★★★</span></div>
+  <h3>내 가게 한 장</h3><p class="msub">미니 프로젝트 · 1절</p>
+  <p class="brief"><b>의뢰</b> 질문 하나, 표 하나, 검증 셋, 그림 한 장, 답 한 줄. 사장님께 드릴 한 장을 만들어라.</p>
+  <div class="mfoot"><a class="pbtn" href="{{ 'final/' | url }}">▶ 시작</a><span class="cnt">0 / 1 끝냄</span></div>
+</article>
+  </div>
+  <div class="prog" aria-live="polite"><span>진행</span><div class="bar" aria-hidden="true"><i id="lpbar"></i></div><span id="lpprog">0 / 46</span></div>
+</div></section>
+<section aria-labelledby="kit-h"><div class="wrap">
+  <h2 id="kit-h"><span class="no">KIT</span> 절마다 들어 있는 것</h2>
+  <div class="kit">
+    <div class="pbox"><h4>▣ Colab 코드</h4><p>복사 버튼 한 번. 편마다 노트북도 있어 "Colab 에서 열기"로 바로 엽니다.</p></div>
+    <div class="pbox"><h4>▣ 실제 실행 결과</h4><p>모든 결과와 그림은 코드를 실제로 돌려 얻었습니다. 내 화면과 숫자를 맞춰 봅니다.</p></div>
+    <div class="pbox"><h4>▣ 읽는 법 · 바꿔 보기</h4><p>결과를 어떻게 읽는지 짚고, 숫자 하나를 바꿔 다시 돌려 보게 합니다.</p></div>
+    <div class="pbox"><h4>▣ 함정과 검증</h4><p>숨은 공백, 중복 영수증, 주말 환율, 100엔 고시. 실제로 걸려 넘어지는 곳을 일부러 넣었습니다.</p></div>
+    <div class="pbox"><h4>▣ 식구들의 한마디</h4><p>세라가 대신 묻고, 박사가 답하고, 초파리가 의심하고, Money-Robo 가 불빛으로 알려 줍니다.</p></div>
+    <div class="pbox"><h4>▣ 가게 데이터</h4><p>회계 용어 없이 카페 · 편의점 · 쇼핑몰 장부로 배웁니다. 숫자는 모두 연습용입니다.</p></div>
+  </div>
+</div></section>
+<footer class="lp-foot"><div class="wrap">
+  <p>제작 안상선 (Ahn, Sang-Sun) · <a href="mailto:sangsun.ahn@gmail.com">sangsun.ahn@gmail.com</a> · © 2026 All rights reserved.</p>
+  <p>예제 속 가게와 숫자는 모두 지어낸 것입니다. Money-Robo는 저자 서비스의 마스코트이며, 극 중 대사는 비유일 뿐 투자 권유가 아닙니다.</p>
+</div></footer>
+</div>
+{% endblock %}
+{% block content %}{% endblock %}
