@@ -48,7 +48,17 @@
       var m=(a.textContent||"").trim().match(/^(\d-\d+)\s/); if(m) a.classList.toggle("is-done", !!d[m[1]]);
     });
   }
-  function run(){ says(); colab(); done(); }
+  function cover(){
+    var d=load(), tot=0, all=0;
+    document.querySelectorAll(".lp-cover .mcard[data-steps]").forEach(function(c){
+      var st=c.dataset.steps.split(","), n=st.filter(function(s){return d[s];}).length; tot+=n; all+=st.length;
+      var cn=c.querySelector(".cnt"); if(cn) cn.textContent=n+" / "+st.length+" 끝냄";
+      c.classList.toggle("is-done", n===st.length);
+    });
+    var p=document.getElementById("lpprog"), b=document.getElementById("lpbar");
+    if(p){ p.textContent=tot+" / "+all; b.style.width=(all? tot/all*100:0)+"%"; }
+  }
+  function run(){ says(); colab(); done(); cover(); }
   if (window.document$ && document$.subscribe) document$.subscribe(run);
   else document.addEventListener("DOMContentLoaded", run);
 })();
