@@ -1,7 +1,7 @@
 site_name: 쉽게 따라 해 보면서 배우는 파이썬
 site_description: 카페·편의점·쇼핑몰 데이터로 한 절씩 따라 하는 파이썬 데이터 연습장
 site_author: 안상선 (Ahn, Sang-Sun)
-copyright: © 2026 안상선 (Ahn, Sang-Sun). All rights reserved. 예제 속 가게와 숫자는 모두 지어낸 것입니다. Money-Robo는 저자 서비스의 마스코트이며, 극 중 대사는 비유일 뿐 투자 권유가 아닙니다.
+copyright: © 2026 안상선 (Ahn, Sang-Sun). All rights reserved. 예제 속 가게와 숫자는 모두 지어낸 것입니다. 주판봇은 연구실 캐릭터이며, 극 중 대사는 비유일 뿐 투자 권유가 아닙니다.
 
 # ↓ 이 두 줄만 내 계정과 repo 이름으로 바꾼다. "Colab에서 열기" 버튼이 이 주소를 쓴다.
 site_url: https://USER.github.io/learn-python-by-doing/

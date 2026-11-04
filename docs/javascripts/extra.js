@@ -1,6 +1,6 @@
 /* 말풍선, Colab 버튼, 완료 체크를 붙인다 (페이지마다 실행) */
 (function(){
-  var CREW = {doc:["박사","박","doc_explain"], asst:["세라","세","asst_why"], fly:["초파리","초","fly_doubt"], robo:["Money-Robo","R","robo_idle"]};
+  var CREW = {doc:["박사","박","doc_explain"], asst:["세라","세","asst_why"], fly:["초파리","초","fly_doubt"], robo:["주판봇","주","robo_idle"]};
   var ALIASES = {doc_explain:"doc_smile",doc_judge:"doc_smile",doc_think:"doc_smile",doc_spark:"doc_smile",
     asst_why:"asst_smile",asst_ledger:"asst_smile",asst_sweat:"asst_smile",asst_spark:"asst_smile",
     fly_doubt:"fly_point",fly_magnify:"fly_point",fly_arms:"fly_point",fly_coffee:"fly_point",
